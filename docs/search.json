@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "spatial_interpolation.html",
+    "href": "spatial_interpolation.html",
+    "title": "Project 6: Spatial Interpolation and Visualization of LiDAR Data",
+    "section": "",
+    "text": "Github Repo\n\n\nThis project uses LiDAR data collected over the UBC Malcolm Knapp Research Forest (MKRF) in Maple Ridge, British Columbia, to generate and evaluate Digital Elevation Models (DEMs) using multiple spatial interpolation approaches. Ground return points were extracted, filtered, and processed using PDAL, and three interpolation methods — Natural Neighbor, Inverse Distance Weighting (IDW), and Spline — were compared against a binned reference DEM using zonal statistics across elevation and slope classes.\n\n\n\n\n\nPreprocess a LiDAR point cloud using PDAL pipelines\nVisualize point cloud data in 2D and 3D in QGIS and ArcGIS Pro\nGenerate a reference DEM using binning from a full-density point cloud\nApply and compare three spatial interpolation methods on a thinned point cloud\nEvaluate interpolation accuracy across elevation and slope zones using zonal statistics\n\n\n\n\n\nData | Layer | Description | Source | |——-|————-|——–| | UBC_MKRF_LiDAR_2016 (16 tiles) | LiDAR point cloud tiles over MKRF, collected 2016 | MGEM Data Store | | tile_index.geojson | Spatial tile index for the LiDAR collection | MGEM Data Store |\nTools | Tool | Purpose | |——|———| | PDAL | Point cloud filtering, cropping, merging, and thinning | | QGIS | Tile selection, point cloud visualization, and 3D mapping | | ArcGIS Pro | DEM generation, interpolation, zonal statistics, and 3D scene visualization |\n\n\n\n\nSixteen LiDAR tiles covering the AOI were identified using a spatial tile index and downloaded from the MGEM Data Store. A PDAL pipeline was used to filter ground returns, crop to the AOI, and merge tiles into a single LAS file. A thinned point cloud was also created by sampling one point per 5 m radius sphere. In ArcGIS Pro, a reference DEM was generated using binning at 1 m resolution. Three interpolation methods (Natural Neighbor, IDW, Spline) were applied to the thinned point cloud and difference rasters were computed against the reference DEM. Zonal statistics were calculated across reclassified elevation and slope zones to quantitatively evaluate each method.\n📄 For a detailed breakdown of the methodology, click here\n\n\n\n\n\nmap_panel_dems_and_differences.pdf — Panel map showing all three interpolated DEMs (shaded relief) and their difference rasters compared to the binned reference DEM\nZonal statistics table showing mean and standard deviation of difference rasters across elevation and slope classes\n\n\n\n\n\n\nThe three interpolation methods produced visibly different surfaces, particularly in areas of steep terrain\nDifference rasters revealed that interpolation error was generally higher in high-slope zones than in low-slope zones\nThe binning approach using full-density LiDAR served as the most reliable reference surface\n\n\n\n\n\n\nReading and interpreting LiDAR metadata and tile indexes\nWriting and executing PDAL pipelines for point cloud processing\nFiltering, cropping, merging, and thinning LiDAR point clouds\nVisualizing point clouds in 2D and 3D in QGIS\nCreating LAS Datasets and generating DEMs in ArcGIS Pro\nApplying Natural Neighbor, IDW, and Spline interpolation methods\nComputing difference rasters using the Raster Calculator\nReclassifying rasters and running zonal statistics\nVisualizing interpolated surfaces in a 3D ArcGIS Pro Local Scene"
+  },
+  {
+    "objectID": "spatial_interpolation.html#overview",
+    "href": "spatial_interpolation.html#overview",
+    "title": "Project 6: Spatial Interpolation and Visualization of LiDAR Data",
+    "section": "",
+    "text": "This project uses LiDAR data collected over the UBC Malcolm Knapp Research Forest (MKRF) in Maple Ridge, British Columbia, to generate and evaluate Digital Elevation Models (DEMs) using multiple spatial interpolation approaches. Ground return points were extracted, filtered, and processed using PDAL, and three interpolation methods — Natural Neighbor, Inverse Distance Weighting (IDW), and Spline — were compared against a binned reference DEM using zonal statistics across elevation and slope classes."
+  },
+  {
+    "objectID": "spatial_interpolation.html#objectives",
+    "href": "spatial_interpolation.html#objectives",
+    "title": "Project 6: Spatial Interpolation and Visualization of LiDAR Data",
+    "section": "",
+    "text": "Preprocess a LiDAR point cloud using PDAL pipelines\nVisualize point cloud data in 2D and 3D in QGIS and ArcGIS Pro\nGenerate a reference DEM using binning from a full-density point cloud\nApply and compare three spatial interpolation methods on a thinned point cloud\nEvaluate interpolation accuracy across elevation and slope zones using zonal statistics"
+  },
+  {
+    "objectID": "spatial_interpolation.html#data-sources-tools",
+    "href": "spatial_interpolation.html#data-sources-tools",
+    "title": "Project 6: Spatial Interpolation and Visualization of LiDAR Data",
+    "section": "",
+    "text": "Data | Layer | Description | Source | |——-|————-|——–| | UBC_MKRF_LiDAR_2016 (16 tiles) | LiDAR point cloud tiles over MKRF, collected 2016 | MGEM Data Store | | tile_index.geojson | Spatial tile index for the LiDAR collection | MGEM Data Store |\nTools | Tool | Purpose | |——|———| | PDAL | Point cloud filtering, cropping, merging, and thinning | | QGIS | Tile selection, point cloud visualization, and 3D mapping | | ArcGIS Pro | DEM generation, interpolation, zonal statistics, and 3D scene visualization |"
+  },
+  {
+    "objectID": "spatial_interpolation.html#methods",
+    "href": "spatial_interpolation.html#methods",
+    "title": "Project 6: Spatial Interpolation and Visualization of LiDAR Data",
+    "section": "",
+    "text": "Sixteen LiDAR tiles covering the AOI were identified using a spatial tile index and downloaded from the MGEM Data Store. A PDAL pipeline was used to filter ground returns, crop to the AOI, and merge tiles into a single LAS file. A thinned point cloud was also created by sampling one point per 5 m radius sphere. In ArcGIS Pro, a reference DEM was generated using binning at 1 m resolution. Three interpolation methods (Natural Neighbor, IDW, Spline) were applied to the thinned point cloud and difference rasters were computed against the reference DEM. Zonal statistics were calculated across reclassified elevation and slope zones to quantitatively evaluate each method.\n📄 For a detailed breakdown of the methodology, click here"
+  },
+  {
+    "objectID": "spatial_interpolation.html#outputs",
+    "href": "spatial_interpolation.html#outputs",
+    "title": "Project 6: Spatial Interpolation and Visualization of LiDAR Data",
+    "section": "",
+    "text": "map_panel_dems_and_differences.pdf — Panel map showing all three interpolated DEMs (shaded relief) and their difference rasters compared to the binned reference DEM\nZonal statistics table showing mean and standard deviation of difference rasters across elevation and slope classes"
+  },
+  {
+    "objectID": "spatial_interpolation.html#key-findings",
+    "href": "spatial_interpolation.html#key-findings",
+    "title": "Project 6: Spatial Interpolation and Visualization of LiDAR Data",
+    "section": "",
+    "text": "The three interpolation methods produced visibly different surfaces, particularly in areas of steep terrain\nDifference rasters revealed that interpolation error was generally higher in high-slope zones than in low-slope zones\nThe binning approach using full-density LiDAR served as the most reliable reference surface"
+  },
+  {
+    "objectID": "spatial_interpolation.html#skills-learned",
+    "href": "spatial_interpolation.html#skills-learned",
+    "title": "Project 6: Spatial Interpolation and Visualization of LiDAR Data",
+    "section": "",
+    "text": "Reading and interpreting LiDAR metadata and tile indexes\nWriting and executing PDAL pipelines for point cloud processing\nFiltering, cropping, merging, and thinning LiDAR point clouds\nVisualizing point clouds in 2D and 3D in QGIS\nCreating LAS Datasets and generating DEMs in ArcGIS Pro\nApplying Natural Neighbor, IDW, and Spline interpolation methods\nComputing difference rasters using the Raster Calculator\nReclassifying rasters and running zonal statistics\nVisualizing interpolated surfaces in a 3D ArcGIS Pro Local Scene"
+  }
+]

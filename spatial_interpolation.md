@@ -36,7 +36,7 @@ This project uses LiDAR data collected over the UBC Malcolm Knapp Research Fores
 ## Methods
 Sixteen LiDAR tiles covering the AOI were identified using a spatial tile index and downloaded from the MGEM Data Store. A PDAL pipeline was used to filter ground returns, crop to the AOI, and merge tiles into a single LAS file. A thinned point cloud was also created by sampling one point per 5 m radius sphere. In ArcGIS Pro, a reference DEM was generated using binning at 1 m resolution. Three interpolation methods (Natural Neighbor, IDW, Spline) were applied to the thinned point cloud and difference rasters were computed against the reference DEM. Zonal statistics were calculated across reclassified elevation and slope zones to quantitatively evaluate each method.
 
-📄 *For a detailed breakdown of the methodology, [click here](methodology.md)*
+📄 *For a detailed breakdown of the methodology, [click here](https://github.com/AgnessChisale/spatial_interpolation_visualisation_lidar/blob/main/methodology_project6.md)*
 
 ---
 
